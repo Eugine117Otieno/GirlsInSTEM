@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls in STEM | Dream Beyond Limits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">GIRLS<span>×</span>STEM</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#inspiration">Inspiration</a></li>
+            <li><a href="#quiz">STEM Quiz</a></li>
+        </ul>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">✨ THE FUTURE IS FEMALE TOO</span>
+
+            <h1>
+                She Can Be<br>
+                <span>Anything.</span>
+            </h1>
+
+            <p>
+                A scientist. An engineer. A programmer. An astronaut.
+                The world of STEM needs your ideas, your creativity,
+                your curiosity and your voice.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#careers" class="btn primary">Explore STEM Careers 🚀</a>
+                <a href="#inspiration" class="btn secondary">Get Inspired ✨</a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <h3>4</h3>
+                    <p>STEM Fields</p>
+                </div>
+                <div>
+                    <h3>∞</h3>
+                    <p>Possibilities</p>
+                </div>
+                <div>
+                    <h3>1</h3>
+                    <p>You!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="orbit orbit1"></div>
+            <div class="orbit orbit2"></div>
+
+            <div class="hero-card">
+                <div class="hero-emoji">👩🏽‍🔬</div>
+                <h2>Future Innovator</h2>
+                <p>Think it. Build it. Change the world.</p>
+            </div>
+
+            <div class="floating-icon icon1">💻</div>
+            <div class="floating-icon icon2">🧬</div>
+            <div class="floating-icon icon3">⚙️</div>
+            <div class="floating-icon icon4">🚀</div>
+        </div>
+    </header>
+
+    <!-- MESSAGE SECTION -->
+    <section class="message-section">
+        <div class="message-box">
+            <span class="small-label">YOUR POTENTIAL IS LIMITLESS</span>
+            <h2>Science has no gender.<br>Innovation has no limits.</h2>
+            <p>
+                STEM is not just about equations, robots or computers.
+                It is about solving real-world problems, improving lives,
+                discovering the unknown and building a better future.
+                You belong in every STEM classroom, laboratory and boardroom.
+            </p>
+        </div>
+    </section>
+
+    <!-- STEM FIELDS -->
+    <section class="fields-section" id="careers">
+        <div class="section-heading">
+            <span class="small-label">DISCOVER YOUR PASSION</span>
+            <h2>Explore the world of <span>STEM</span></h2>
+            <p>Four powerful fields. Endless opportunities.</p>
+        </div>
+
+        <div class="fields-grid">
+
+            <div class="field-card science">
+                <div class="field-icon">🧪</div>
+                <h3>Science</h3>
+                <p>Discover how the world works. Explore life, nature, space and matter.</p>
+                <div class="career-list">
+                    <span>Biologist</span>
+                    <span>Doctor</span>
+                    <span>Astronomer</span>
+                    <span>Chemist</span>
+                </div>
+                <button onclick="exploreField('Science')">Explore Science →</button>
+            </div>
+
+            <div class="field-card technology">
+                <div class="field-icon">💻</div>
+                <h3>Technology</h3>
+                <p>Create digital solutions, software, applications and intelligent systems.</p>
+                <div class="career-list">
+                    <span>Software Developer</span>
+                    <span>Cybersecurity Expert</span>
+                    <span>AI Engineer</span>
+                    <span>Data Scientist</span>
+                </div>
+                <button onclick="exploreField('Technology')">Explore Technology →</button>
+            </div>
+
+            <div class="field-card engineering">
+                <div class="field-icon">⚙️</div>
+                <h3>Engineering</h3>
+                <p>Design, build and improve machines, structures and innovative solutions.</p>
+                <div class="career-list">
+                    <span>Mechanical Engineer</span>
+                    <span>Civil Engineer</span>
+                    <span>Electrical Engineer</span>
+                    <span>Robotics Engineer</span>
+                </div>
+                <button onclick="exploreField('Engineering')">Explore Engineering →</button>
+            </div>
+
+            <div class="field-card mathematics">
+                <div class="field-icon">📊</div>
+                <h3>Mathematics</h3>
+                <p>Use numbers, logic and patterns to solve challenging real-world problems.</p>
+                <div class="career-list">
+                    <span>Statistician</span>
+                    <span>Actuary</span>
+                    <span>Mathematician</span>
+                    <span>Financial Analyst</span>
+                </div>
+                <button onclick="exploreField('Mathematics')">Explore Mathematics →</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAREER FINDER -->
+    <section class="career-finder">
+        <div class="finder-content">
+            <div>
+                <span class="small-label">FIND YOUR PATH</span>
+                <h2>What kind of future<br>excites you?</h2>
+                <p>Discover a STEM career that matches your interests and strengths.</p>
+            </div>
+
+            <div class="finder-box">
+                <label for="interest">Choose what you love:</label>
+
+                <select id="interest">
+                    <option value="">-- Select your interest --</option>
+                    <option value="building">Building and creating things</option>
+                    <option value="computers">Computers and technology</option>
+                    <option value="nature">Nature and living things</option>
+                    <option value="numbers">Numbers and solving problems</option>
+                    <option value="space">Space and the universe</option>
+                    <option value="helping">Helping people</option>
+                </select>
+
+                <button class="btn primary full-btn" onclick="findCareer()">Discover My Career ✨</button>
+
+                <div id="careerResult" class="career-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROLE MODELS -->
+    <section class="inspiration-section" id="inspiration">
+        <div class="section-heading">
+            <span class="small-label">WOMEN WHO CHANGED THE WORLD</span>
+            <h2>Meet the <span>STEM Queens</span> 👑</h2>
+            <p>They dared to dream. They worked. They changed history.</p>
+        </div>
+
+        <div class="inspiration-grid">
+
+            <div class="person-card">
+                <div class="person-emoji">👩🏾‍🚀</div>
+                <h3>Mae Jemison</h3>
+                <p class="person-role">Astronaut & Scientist</p>
+                <p>The first Black woman to travel into space. She proved that the stars are within reach.</p>
+            </div>
+
+            <div class="person-card">
+                <div class="person-emoji">👩🏻‍💻</div>
+                <h3>Ada Lovelace</h3>
+                <p class="person-role">Computing Pioneer</p>
+                <p>Recognized for her early work on computer programming and imaginative vision of computing.</p>
+            </div>
+
+            <div class="person-card">
+                <div class="person-emoji">👩🏾‍🔬</div>
+                <h3>Wangari Maathai</h3>
+                <p class="person-role">Scientist & Environmentalist</p>
+                <p>A Kenyan scientist who founded the Green Belt Movement and inspired environmental action.</p>
+            </div>
+
+            <div class="person-card">
+                <div class="person-emoji">👩🏻‍🔬</div>
+                <h3>Katherine Johnson</h3>
+                <p class="person-role">Mathematician</p>
+                <p>Her mathematical calculations helped NASA's early space missions succeed.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MOTIVATION -->
+    <section class="motivation-section">
+        <div class="motivation-content">
+            <div class="motivation-art">
+                <div class="big-star">✦</div>
+                <div class="big-emoji">🌟</div>
+                <div class="small-star">✧</div>
+            </div>
+
+            <div class="motivation-text">
+                <span class="small-label">A MESSAGE JUST FOR YOU</span>
+                <h2>You are not too young.<br>You are not too small.<br><span>You are powerful.</span></h2>
+
+                <p>
+                    Never allow anyone to convince you that STEM is only for boys.
+                    Your curiosity is your superpower. Your ideas matter.
+                    Every great inventor started with a question.
+                    Every great scientist was once a student.
+                    Start today. Believe in yourself. Keep learning.
+                </p>
+
+                <button class="btn primary" onclick="newMotivation()">
+                    Give Me Motivation 💖
+                </button>
+
+                <h3 id="motivationText" class="motivation-quote">
+                    "Your dreams are valid. Your future is waiting."
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="quiz-section" id="quiz">
+        <div class="quiz-container">
+            <span class="small-label">TEST YOUR KNOWLEDGE</span>
+            <h2>STEM Challenge 🧠</h2>
+            <p>Are you ready to challenge your brain?</p>
+
+            <div class="quiz-box">
+                <h3 id="question">Loading question...</h3>
+                <div id="answers" class="answers"></div>
+                <p id="quizFeedback"></p>
+
+                <div class="quiz-bottom">
+                    <span id="quizProgress">Question 1</span>
+                    <button id="nextBtn" class="btn primary" onclick="nextQuestion()" disabled>
+                        Next Question →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="final-section">
+        <div class="final-content">
+            <div class="final-icon">🌈</div>
+            <h2>The world is waiting<br>for <span>your ideas.</span></h2>
+            <p>Don't just imagine the future. Be the girl who builds it.</p>
+            <a href="#careers" class="btn white-btn">Start Your STEM Journey 🚀</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">GIRLS<span>×</span>STEM</div>
+        <p>Dream Big. Learn Boldly. Create Fearlessly.</p>
+        <p class="copyright">© 2026 Girls in STEM | Inspiring the next generation of innovators.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
